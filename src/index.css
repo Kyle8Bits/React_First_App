@@ -39,3 +39,25 @@
 .student p{
   margin: 0;
 }
+
+.welcome-mess{
+  font-size: 2.5em;
+  background-color: rgb(125, 156, 218);
+  padding:10px;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+.login-prompt{
+  font-size: 2.5em;
+  background-color: rgb(86, 10, 1);
+  padding:10px;
+  color: white;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+.list-lang{
+  font-family: Arial;
+  font-size: 2.5em;
+}
