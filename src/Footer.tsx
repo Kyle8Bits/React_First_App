@@ -1,10 +1,9 @@
-
-
 function Footer(){
-    return (
+    return(
         <footer>
-            <p>&copy; {new Date().getFullYear()} </p>
+            <p>&copy; {new Date().getFullYear()} My porfolio website</p>
         </footer>
-    )
+    );
 }
+
 export default Footer;
