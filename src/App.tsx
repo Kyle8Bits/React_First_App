@@ -1,11 +1,8 @@
-import List from "./List";
-import Card from "./Card";
+import MyComponent from "./web/MyComponent";
 
 function App() {
   return(
-    <>
-      <List/>
-    </>
+    <MyComponent/>
   );
 }
 

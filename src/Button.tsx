@@ -1,16 +1,12 @@
+import React  from "react";
 function Button(){
-    const styles = {
-        backgroundColor: "hsla(200, 100%, 50%)",
-        color: "white",
-        padding: "10px 20px",
-        borderRadius: "5px",
-        border: "none",
-        cursor:"pointer",
-    }
+    
+    const handleCLick = (e:any) => e.target.textContent = "OUCH!";
+
 
     return(
-        <button style = {styles}>Click me</button>
+        <button onClick= { (e) => handleCLick(e)}> CLick me </button>
     );
 }
 
-export default Button;
+export default Button
