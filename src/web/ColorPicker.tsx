@@ -5,7 +5,9 @@ function ColorPicker(){
 
    function handleChangeColor(event:any){
         pickColor(event.target.value)
+        document.body.style.backgroundColor = event.target.value;
    }
+   
 
    return(
     <div className="color-picker-container">
