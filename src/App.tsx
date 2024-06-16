@@ -1,9 +1,11 @@
-import MyComponent from "./web/MyComponent";
-import ColorPicker from "./web/ColorPicker";
-
+import Body from "./components/Body";
+import Header from "./components/Header";
 function App() {
   return(
-    <ColorPicker/>
+    <>
+    <Body/>
+    <Header/>
+    </>
   );
 }
 
