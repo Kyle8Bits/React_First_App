@@ -6,11 +6,11 @@ import facebook from '../assets/facebook.png'
 import instagram from '../assets/instagram.png'
 import github from '../assets/github.png'
 
-
-function Body(){
+function Home(){
     const [facebookUrl, setFacebookUrl] = useState('https://www.facebook.com/kyle.mai261/');
     const [instagramUrl, setInstagramUrl] = useState('https://www.instagram.com/_kyle_intothevoid/');
     const [githubUrl, setGithubUrl] = useState('https://github.com/Kyle8Bits');
+    
 
     return(
 
@@ -25,17 +25,17 @@ function Body(){
                 </p>
                 <ul className='nav-image'>
                     <li className='link-image'> 
-                        <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
+                        <a className =" facebook_button" href={facebookUrl} target="_blank" rel="noopener noreferrer">
                             <img src={facebook} alt="Facebook"/>
                         </a>
                     </li>
                     <li className='link-image'> 
-                        <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+                        <a className =" instagram_button" href={instagramUrl} target="_blank" rel="noopener noreferrer">
                             <img src={instagram} alt="Instagram"/>
                         </a>
                     </li>
                     <li className='link-image'> 
-                        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                        <a className =" github_button" href={githubUrl} target="_blank" rel="noopener noreferrer">
                             <img src={github} alt="Github"/>
                         </a>
                     </li>
@@ -48,4 +48,4 @@ function Body(){
     );
 }
 
-export default Body;
+export default Home;

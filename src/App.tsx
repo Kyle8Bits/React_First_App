@@ -1,5 +1,7 @@
-import Body from "./components/Body";
+import Home from "./components/Home"
 import Header from "./components/Header";
+import SkillCards from "./components/SkillCards";
+
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 function App() {
   return(
@@ -10,7 +12,8 @@ function App() {
             <link rel="icon" href="/helmet.png" type="image/x-icon" />
         </Helmet>
           <Header/>
-          <Body/>
+          <Home/>
+          <SkillCards/>
       </div>
     </HelmetProvider>
   );

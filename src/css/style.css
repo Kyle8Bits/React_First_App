@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+/*header*/
 img{
     width: 100%;
     display: flex;
@@ -19,6 +20,7 @@ a{
 body{
     font-family: 'Play', sans-serif;
     background-color: #18181B;
+    font-size: 20px;
 }
 
 .top{
@@ -64,17 +66,18 @@ nav{
 }
 
 .link a:hover::after{
-    width: 70%;
+    width: 80%;
 }
 
 
-/* body */
+/* home */
 
 .container{
     
     max-width: 1200px;
     margin: auto;
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
+    border-bottom: 3px solid white;
 }
 
 header{
@@ -160,9 +163,103 @@ header .avatar_group img {
     gap: 3rem;
 }
 
-.link-image img:hover{
-    outline: 2px solid #ffffff; /* Blue outline, adjust color as needed */
+.link-image .facebook_button img:hover{
+    outline: 3px solid#1877F2; /* Blue outline, adjust color as needed */
+    outline-offset: 2px; /* Adjusts the space between the image and the outline */
+    border-radius: 50%;
+    box-shadow: 0 0 17px 2px #1877F2;
+}
+
+.link-image .instagram_button img:hover{
+    outline: 3px solid #962fbf ; /* Blue outline, adjust color as needed */
+    outline-offset: 2px; /* Adjusts the space between the image and the outline */
+    border-radius: 50%;
+    box-shadow:
+    -1px -1px 15px 1px #feda75,    
+    -0.5px -1px 15px 1px #fa7e1e, 
+    0 1px 15px 2px #d62976,
+    1px 1px 15px 2px #962fbf,
+    -1px 1px 15px 1px #4f5bd5;
+}
+
+.link-image .github_button img:hover{
+    outline: 3px solid #d0d0d0; /* Blue outline, adjust color as needed */
     outline-offset: 2px; /* Adjusts the space between the image and the outline */
     border-radius: 50%;
     box-shadow: 0 0 15px 2px #ffffff;
+}
+
+/*skill card*/
+
+.skill_header{
+    position: relative;
+    font-family: "Play", "sans-serif";
+    color: #ccc;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.skill_title{
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+.description{
+    
+    padding-bottom: 1px;
+    font-size: 12px; 
+}
+
+
+.skill_container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 25px;
+    font-family: "Play", "sans-serif";
+    color: #ccc;
+}
+
+.skill{
+    border-radius: 15px;
+    position: relative;
+    width: 400px;
+    box-shadow: 0 0 15px 2px #ffffff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+
+.text_area{
+    display:inline;
+    grid-column: 2;
+    margin-left: -50px;
+}
+
+.skill_photo{
+    position: relative;
+    padding: 15px 10px 15px 15px;
+    max-width: 150px;
+    height:auto;
+    grid-column: 1;
+    border-radius: 10%;
+}
+
+
+.skill_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  /* Allows items to wrap onto the next line as needed */
+    justify-content: center;  /* Centers items horizontally */
+}
+
+@media (max-width: 600px) {  /* Adjust the breakpoint as needed */
+    .skill_list {
+        flex-direction: column;
+        align-items: center;  /* Centers items vertically within the container */
+    }
 }
