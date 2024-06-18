@@ -17,8 +17,12 @@ a{
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Play', sans-serif;
     background-color: #18181B;
+}
+
+.top{
+    border-bottom: 2px solid white;
 }
 
 nav{
@@ -44,7 +48,7 @@ nav{
 
 .link a{
     position: relative;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
     color: #fff;
 }
 
@@ -64,18 +68,13 @@ nav{
 }
 
 
-/* header */
+/* body */
 
 .container{
+    
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
-}
-
-.blur{
-    position: absolute;
-    box-shadow: 0px 0px 1200px 60px #1d4ed8;
-    z-index: -100;
 }
 
 header{
@@ -84,10 +83,12 @@ header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 2rem
+    gap: 2rem;
 }
 
 header .content h4{
+    font-family: 'Play', sans-serif;
+
     margin-bottom: 1rem;
     color: #ccc;
     font-size: 1rem;
@@ -95,6 +96,7 @@ header .content h4{
 }
 
 header .content h1{
+    font-family: 'Play', sans-serif;
     color: #fff;
     margin-bottom: 1rem;
     font-size: 3rem;
@@ -103,32 +105,64 @@ header .content h1{
 }
 
 header .content h1 span{
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),   /* White glow */
+    0 0 20px rgba(255, 255, 255, 0.6),   /* Larger, more diffused glow */
+    0 0 30px rgba(255, 255, 255, 0.4),   /* Even larger, more diffused glow */
+    0 0 40px rgba(255, 255, 255, 0.3); 
 }
 
 header .content p{
     margin-bottom: 2rem;
     color: #ccc;
 }
- 
+
+.contacts {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.contacts::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.contacts:hover::after {
+    width: 90%;
+    color: #1d4ed8; 
+}
+
+
 header .avatar_group{
     position: relative;
 }
 
-header .avatar_group .avatar {
-    position: absolute;
-    max-width: 450px;
-    left: 50%;
-    top: 50%; 
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    opacity: 0.5; 
+header .avatar_group img {
+    max-width: 500px;
+    margin: auto;
+    opacity: 1;
 }
 
-header .avatar_group .avatar2 {
-    position: relative; 
-    max-width: 400px;
-    margin: auto;
-    z-index: 2;
+
+.nav-image{
+    cursor: pointer;
+    max-width: 15rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link-image img:hover{
+    outline: 2px solid #ffffff; /* Blue outline, adjust color as needed */
+    outline-offset: 2px; /* Adjusts the space between the image and the outline */
+    border-radius: 50%;
+    box-shadow: 0 0 15px 2px #ffffff;
 }

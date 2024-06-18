@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react';
 import '../css/style.css'
+import logo from '../assets/logo.png'
 import avatar from '../assets/avatar.jpg'
-import avatar_2_layer from '../assets/avater_2_layer.jpg'
-
 
 function Header(){
-    return(
-        <header className="container">
-            <div className="content">
-                <span className="blur"></span>
-                <span className="blur"></span>
-                <h4>SOPHOMORE FROM RMIT UNIVERSITY</h4>
-                <h1>Hi, I'm <span>Kyle</span>, Software Engineering</h1>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, quod? Tenetur quasi harum impedit, corrupti quas libero pariatur, ducimus repellendus nam consequuntur quidem est molestias distinctio? Expedita culpa quasi id.
-                </p>
-            </div>
-            <div className="avatar_group">
-                    <img src = {avatar_2_layer} alt = "avatar2" className = "avatar2"></img>
-                    <img src = {avatar} alt = "avatar" className = "avatar"></img>
-            </div>
-        </header>
+    return (
+        <body className='top'>
+            <nav> 
+                <div>
+                    <a href = '#'>
+                        <img src = {logo} alt = "logo" className = "nav-logo"></img>
+                    </a>
+                </div>
+                <ul className='nav-links'>
+                    <li className='link'><a href="#">Home</a></li>
+                    <li className='link'><a href="#">Skills</a></li>
+                    <li className='link'><a href="#">Portfolio</a></li>
+                    <li className='link'><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </body>
+        
     );
 }
 

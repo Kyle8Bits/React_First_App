@@ -1,29 +1,51 @@
-import React from 'react';
+import React from "react";
+import {useState} from 'react';
 import '../css/style.css'
-import logo from '../assets/logo.png'
 import avatar from '../assets/avatar.jpg'
-
-function Header(){
-    return (
-        <body>
-            <nav> 
-                <div>
-                    <a href = '#'>
-                        <img src = {logo} alt = "logo" className = "nav-logo"></img>
-                    </a>
-                </div>
+import facebook from '../assets/facebook.png'
+import instagram from '../assets/instagram.png'
+import github from '../assets/github.png'
 
 
-                <ul className='nav-links'>
-                    <li className='link'><a href="#">Home</a></li>
-                    <li className='link'><a href="#">About</a></li>
-                    <li className='link'><a href="#">Services</a></li>
-                    <li className='link'><a href="#">Contact</a></li>
+function Body(){
+    const [facebookUrl, setFacebookUrl] = useState('https://www.facebook.com/kyle.mai261/');
+    const [instagramUrl, setInstagramUrl] = useState('https://www.instagram.com/_kyle_intothevoid/');
+    const [githubUrl, setGithubUrl] = useState('https://github.com/Kyle8Bits');
+
+    return(
+
+        <header className="container">
+            <div className="content">
+                <h4>SOPHOMORE FROM RMIT UNIVERSITY VIETNAM</h4>
+                <h1>Hi, I'm <span>Kyle</span>, Software Engineer</h1>
+                <p className="script">
+                   My very first pofortlio website using React. 
+                   You can find anything about my information through out college years.
+                    Feel free to <span className="contacts">contact me.</span>
+                </p>
+                <ul className='nav-image'>
+                    <li className='link-image'> 
+                        <a href={facebookUrl} target="_blank" rel="noopener noreferrer">
+                            <img src={facebook} alt="Facebook"/>
+                        </a>
+                    </li>
+                    <li className='link-image'> 
+                        <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+                            <img src={instagram} alt="Instagram"/>
+                        </a>
+                    </li>
+                    <li className='link-image'> 
+                        <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                            <img src={github} alt="Github"/>
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-        </body>
-        
+            </div>
+            <div className="avatar_group">
+                    <img src = {avatar}></img>
+            </div>
+        </header>
     );
 }
 
-export default Header;
+export default Body;
