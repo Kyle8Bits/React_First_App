@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-/*header*/
+/* Nav-bar start */
 img{
     width: 100%;
     display: flex;
@@ -21,10 +21,6 @@ body{
     font-family: 'Play', sans-serif;
     background-color: #18181B;
     font-size: 20px;
-}
-
-.top{
-    border-bottom: 2px solid white;
 }
 
 nav{
@@ -61,7 +57,7 @@ nav{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #1d4ed8;
+    background-color: #F6A82B;
     transition: all 0.3s ease;
 }
 
@@ -69,15 +65,14 @@ nav{
     width: 80%;
 }
 
+/* Nav-bar end */
 
-/* home */
+/*Banner start*/
 
-.container{
-    
-    max-width: 1200px;
+.container{  
     margin: auto;
-    padding: 4rem 2rem;
-    border-bottom: 3px solid white;
+    padding: 2rem 2rem;
+    background-color: #F6A82B;
 }
 
 header{
@@ -89,29 +84,35 @@ header{
     gap: 2rem;
 }
 
+header .content{
+    margin-left: 10%;
+}
+
 header .content h4{
     font-family: 'Play', sans-serif;
-
     margin-bottom: 1rem;
-    color: #ccc;
+    color: #181818;
     font-size: 1rem;
     font-weight: 600;
 }
 
 header .content h1{
     font-family: 'Play', sans-serif;
-    color: #fff;
+    color: #181818;
     margin-bottom: 1rem;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: bolder;
     line-height: 4rem;
 }
 
+header .content .script{
+    color: #181818;
+}
+
 header .content h1 span{
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),   /* White glow */
-    0 0 20px rgba(255, 255, 255, 0.6),   /* Larger, more diffused glow */
-    0 0 30px rgba(255, 255, 255, 0.4),   /* Even larger, more diffused glow */
-    0 0 40px rgba(255, 255, 255, 0.3); 
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    font-size: 3.5rem;
 }
 
 header .content p{
@@ -123,7 +124,8 @@ header .content p{
     cursor: pointer;
     position: relative;
     padding-bottom: 5px;
-    color: #fff;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .contacts::after {
@@ -133,13 +135,13 @@ header .content p{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #1d4ed8;
+    background-color: #181818;
     transition: all 0.3s ease;
 }
 
 .contacts:hover::after {
-    width: 90%;
-    color: #1d4ed8; 
+    width: 120%;
+    color: #181818;
 }
 
 
@@ -148,9 +150,12 @@ header .avatar_group{
 }
 
 header .avatar_group img {
-    max-width: 500px;
+    max-width: 300px;
     margin: auto;
     opacity: 1;
+    border-radius: 50%;
+    outline: 5px solid #18181B ;
+    outline-offset: 8px;
 }
 
 
@@ -161,6 +166,7 @@ header .avatar_group img {
     display: flex;
     align-items: center;
     gap: 3rem;
+    margin-left: 25%;
 }
 
 .link-image .facebook_button img:hover{
@@ -183,13 +189,18 @@ header .avatar_group img {
 }
 
 .link-image .github_button img:hover{
-    outline: 3px solid #d0d0d0; /* Blue outline, adjust color as needed */
+    outline: 3px solid #555555; /* Blue outline, adjust color as needed */
     outline-offset: 2px; /* Adjusts the space between the image and the outline */
     border-radius: 50%;
-    box-shadow: 0 0 15px 2px #ffffff;
+    box-shadow: 0 0 15px 2px #3c3c3c;
 }
 
-/*skill card*/
+/* Banner end */
+
+/*Skill-Card start*/
+.skillcard{
+    padding-bottom: 2rem;
+}
 
 .skill_header{
     position: relative;
@@ -197,16 +208,16 @@ header .avatar_group img {
     color: #ccc;
     font-size: 2rem;
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .skill_title{
     padding-bottom: 10px;
     font-size: 18px;
 }
+
 .description{
-    
     padding-bottom: 1px;
     font-size: 12px; 
 }
@@ -263,3 +274,90 @@ header .avatar_group img {
         align-items: center;  /* Centers items vertically within the container */
     }
 }
+
+/*Skill card end*/
+
+/* Portfolio start */
+
+.portfolio_section{
+    padding-bottom: 50px;
+    font-family: "Play", "sans-serif";
+}
+
+
+.portfolio_section h3{
+    position: relative;
+    font-family: "Play", "sans-serif";
+    color: #ccc;
+    font-size: 2rem;
+    text-align: left;
+
+    
+
+    box-shadow: 0 3px 0 0 #F6A82B; /* x-offset, y-offset, blur-radius, spread-radius, color */
+    display: inline; /* Keep it to the text length */
+    padding-bottom: 3px; /* Adjust the space between text and shadow */
+    margin-left: 45px;
+}
+
+.portfolio_list{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  /* Allows items to wrap onto the next line as needed */
+    justify-content: center; 
+
+}
+
+.portfolio_container {
+    border-color: black;
+    border-radius: 15px;
+    background-color: #F6A82B;
+    width: 500px;
+    height: 400px;
+    text-align: left; /* Centers the content */
+    box-shadow: 0 0 15px 2px white;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.portfolio_photo {
+    height: 200px;
+    border-radius: 15px;
+    padding: 10px;
+    top: 0px;
+    position: absolute;
+    width: 90%; /* Adjust this as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: flex; /* Removes bottom space/gap */
+    overflow: hidden; /* Hides anything outside this area */
+}
+
+.info {
+    padding: 10px 10px 10px;
+    border-radius: 15px;
+    height: 50%;
+    position: absolute;
+    bottom: 0; /* Positions the div at the bottom of the container */
+    left: 0;
+    width: 100%; /* Ensures it covers the full width of the image */
+    background-color: #18181B;
+}
+
+.title{
+    color: #ccc;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.des{
+    color: #ccc;
+    font-size: 15px;
+}
+
+.portfolio_container .info:hover{
+    background-color: #3c3c3c;
+}
+

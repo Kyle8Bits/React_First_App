@@ -5,6 +5,8 @@ import avatar from '../assets/avatar.jpg'
 import facebook from '../assets/facebook.png'
 import instagram from '../assets/instagram.png'
 import github from '../assets/github.png'
+import { Helmet } from "react-helmet-async";
+
 
 function Home(){
     const [facebookUrl, setFacebookUrl] = useState('https://www.facebook.com/kyle.mai261/');
@@ -13,15 +15,19 @@ function Home(){
     
 
     return(
+        <>
+            <Helmet>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" />
+            </Helmet>
 
         <header className="container">
             <div className="content">
-                <h4>SOPHOMORE FROM RMIT UNIVERSITY VIETNAM</h4>
+                <h4>JUNIOR FROM RMIT UNIVERSITY VIETNAM</h4>
                 <h1>Hi, I'm <span>Kyle</span>, Software Engineer</h1>
                 <p className="script">
                    My very first pofortlio website using React. 
                    You can find anything about my information through out college years.
-                    Feel free to <span className="contacts">contact me.</span>
+                    Feel free to <span className="contacts">contact me.</span> <i className="ri-arrow-right-line" style={{ color: "white" }}></i>
                 </p>
                 <ul className='nav-image'>
                     <li className='link-image'> 
@@ -45,6 +51,8 @@ function Home(){
                     <img src = {avatar}></img>
             </div>
         </header>
+
+    </>
     );
 }
 
