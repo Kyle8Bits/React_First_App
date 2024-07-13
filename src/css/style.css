@@ -160,30 +160,6 @@ header .avatar_group img {
     border-radius: 50%;
 }
 
-.cir{
-    position: absolute;
-    border-radius: 50%;
-    border: 10px solid #da9527;
-    border-top: 10px solid #181818;
-    outline-offset: 8px;
-    top:-25px;
-    left:-25px;
-    width: 400px;
-    height: 400px;
-    animation: ani 3s linear infinite;
-
-}
-
-@keyframes ani{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-
 
 .nav-image{
     cursor: pointer;
@@ -350,13 +326,12 @@ header .avatar_group img {
 }
 
 .portfolio_photo {
-    height: 200px;
+    height: auto;
     border-radius: 15px;
     padding: 10px;
-    top: 0px;
+    top: 25px;
     position: absolute;
     width: 90%; /* Adjust this as needed */
-    height: auto; /* Maintain aspect ratio */
     display: flex; /* Removes bottom space/gap */
     overflow: hidden; /* Hides anything outside this area */
 }
@@ -383,7 +358,26 @@ header .avatar_group img {
     font-size: 15px;
 }
 
-.portfolio_container .info:hover{
-    background-color: #3c3c3c;
+.portfolio_container:hover{
+    background-color: #f89407;
+    .info{
+        background-color: #3c3c3c;
+    }
+    .portfolio_photo{
+        top: 0px;
+
+    }
 }
 
+
+/*end portfolio*/
+
+/* start footer*/
+
+footer{
+    font-family: 'Play', sans-serif;
+    color: white;
+    padding-left: 60px;
+    padding-bottom: 50px;
+    text-align: left;
+}

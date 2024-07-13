@@ -48,8 +48,7 @@ function Home(){
                 </ul>
             </div>
             <div className="avatar_group">
-                <div className="cir"></div>
-                    <img src = {avatar}></img>
+                <img src = {avatar}></img>
             </div>
         </header>
 
