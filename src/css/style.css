@@ -146,17 +146,43 @@ header .content p{
 
 
 header .avatar_group{
+    position: absolute;
+    left: 150px;
     position: relative;
+    border-radius: 50%;
+    max-width: 350px;
 }
 
 header .avatar_group img {
-    max-width: 300px;
+    position: relative;
     margin: auto;
     opacity: 1;
     border-radius: 50%;
-    outline: 5px solid #18181B ;
-    outline-offset: 8px;
 }
+
+.cir{
+    position: absolute;
+    border-radius: 50%;
+    border: 10px solid #da9527;
+    border-top: 10px solid #181818;
+    outline-offset: 8px;
+    top:-25px;
+    left:-25px;
+    width: 400px;
+    height: 400px;
+    animation: ani 3s linear infinite;
+
+}
+
+@keyframes ani{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 
 
 .nav-image{
