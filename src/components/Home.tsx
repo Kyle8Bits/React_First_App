@@ -16,10 +16,6 @@ const Home = () => {
 
     return(
         <>
-            <Helmet>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" />
-            </Helmet>
-
         <header className="container">
             <div className="content">
                 <h4>JUNIOR FROM RMIT UNIVERSITY VIETNAM</h4>

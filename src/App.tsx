@@ -19,23 +19,17 @@ function App() {
   
 
   return(
-    <HelmetProvider>
-      <div>
-        <Helmet>
-            <title>Kyle's Porfolio</title>
-            <link rel="icon" href="helmet.png" type="image/x-icon" />
-        </Helmet>
-          <Header 
-           scrollToSkills={() => scrollToSection(skillRef)} 
-           scrollToPortfolio={() => scrollToSection(portfolioRef)} 
-           scrollToContact={() => scrollToSection(contactRef)} 
-          />
-          <section ref={contactRef}> <Home/> </section>
-          <section ref={skillRef}> <SkillCards/> </section>
-          <section ref={portfolioRef}> <PortfolioCard/> </section>
-          <Footer/>
-      </div>
-    </HelmetProvider>
+    <>
+      <Header 
+        scrollToSkills={() => scrollToSection(skillRef)} 
+        scrollToPortfolio={() => scrollToSection(portfolioRef)} 
+        scrollToContact={() => scrollToSection(contactRef)} 
+      />
+      <section ref={contactRef}> <Home/> </section>
+      <section ref={skillRef}> <SkillCards/> </section>
+      <section ref={portfolioRef}> <PortfolioCard/> </section>
+      <Footer/>
+    </>
   );
 }
 
