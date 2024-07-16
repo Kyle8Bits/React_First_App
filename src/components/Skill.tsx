@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/style.css'
 
-function Skill(props:any){
+const Skill = (props:any) =>{
     return(
         <header className="skill_container">
 

@@ -7,7 +7,7 @@ import sed from '../assets/sed.png'
 import cad from '../assets/cad.png'
 import digital from '../assets/digital.png'
 
-function PortfolioCards(){
+const PortfolioCards = () => {
     return(
 
         <div className= 'portfolio_section'>

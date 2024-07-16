@@ -8,7 +8,7 @@ import github from '../assets/github.png'
 import { Helmet } from "react-helmet-async";
 
 
-function Home(){
+const Home = () => {
     const [facebookUrl, setFacebookUrl] = useState('https://www.facebook.com/kyle.mai261/');
     const [instagramUrl, setInstagramUrl] = useState('https://www.instagram.com/_kyle_intothevoid/');
     const [githubUrl, setGithubUrl] = useState('https://github.com/Kyle8Bits');

@@ -1,6 +1,6 @@
 import '../css/style.css'
 
-function Portfolio(props:any){
+const Portfolio = (props:any) => {
     return(
         <header className="portfolio_container">
                 <img className='portfolio_photo' src ={props.photo}></img>

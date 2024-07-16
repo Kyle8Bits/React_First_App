@@ -5,7 +5,7 @@ import programming from "../assets/programming.jpg";
 import embedded from "../assets/embedded.jpg";
 import software from "../assets/software.jpg";
 
-function SkillCards(){
+const SkillCards = () =>{
 
     
 
