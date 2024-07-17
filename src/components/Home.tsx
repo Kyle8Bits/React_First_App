@@ -1,5 +1,6 @@
 import React from "react";
 import {useState} from 'react';
+import 'remixicon/fonts/remixicon.css';
 import '../css/style.css'
 import avatar from '../assets/avatar.jpg'
 import facebook from '../assets/facebook.png'

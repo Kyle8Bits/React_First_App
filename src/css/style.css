@@ -70,8 +70,9 @@ nav{
 /*Banner start*/
 
 .container{  
+    max-width: fit-content;
     margin: auto;
-    padding: 2rem 2rem;
+    padding: 5rem 2rem;
     background-color: #F6A82B;
 }
 
@@ -146,20 +147,15 @@ header .content p{
 
 
 header .avatar_group{
-    position: absolute;
-    left: 150px;
     position: relative;
-    border-radius: 50%;
-    max-width: 350px;
 }
 
-header .avatar_group img {
-    position: relative;
+header .avatar_group img{
+    max-width: 400px;
     margin: auto;
-    opacity: 1;
     border-radius: 50%;
+    /* margin-left: 200px; */
 }
-
 
 .nav-image{
     cursor: pointer;
@@ -169,6 +165,15 @@ header .avatar_group img {
     align-items: center;
     gap: 3rem;
     margin-left: 25%;
+}
+
+header .link-image{
+    position: relative;
+}
+
+header .nav-image{
+    position: relative;
+    margin: auto;
 }
 
 .link-image .facebook_button img:hover{
@@ -283,6 +288,7 @@ header .avatar_group img {
 
 .portfolio_section{
     padding-bottom: 50px;
+    margin: auto;
     font-family: "Play", "sans-serif";
 }
 
@@ -380,4 +386,25 @@ footer{
     padding-left: 60px;
     padding-bottom: 50px;
     text-align: left;
+}
+
+
+@media (width < 900px){
+    .nav-links{
+        display:none;
+    }
+    header{
+        grid-template-columns: repeat(1,1fr);
+    }
+    header .avatar_group{
+        grid-area: 1/1/2/2;
+    }
+}
+
+@media (width < 600px){
+    header .avatar_group::before{
+        display: none;
+    }
+
+
 }
