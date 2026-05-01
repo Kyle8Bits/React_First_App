@@ -1,5 +1,13 @@
 [
   {
+    "slug": "enteprise_chatbot",
+    "title": "Enterprise Chatbot",
+    "description": "An enterprise chatbot platform that lets organizations chat with their documents, providing answers with citations and real-time responses. It includes easy document uploads, secure login, and management tools. Built with a clear structure, it uses advanced AI to process and understand documents, while also generating images when needed. The platform is designed to keep everything simple and well-organized for users.",
+    "image": "enterprise_chatbot.png",
+    "tags": ["React", "Bun.js", "Redis", "Weaviate", "Min.IO"],
+    "builtFor": "Professional Project"
+  },
+  {
     "slug": "devision",
     "title": "Devision",
     "description": "Job Matching & Recruitment Platform. Designed and implemented a microservices architecture for applicant and employer management systems. Built an event-driven data integration pipeline using Apache Kafka to synchronize data across services. Developed the frontend with Headless UI for customizable and accessible UI components. Enabled real-time job and candidate notifications to improve recruitment responsiveness.",
