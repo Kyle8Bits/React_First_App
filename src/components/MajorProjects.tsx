@@ -72,15 +72,19 @@ const MajorProjects = () => {
                   <span className="px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded bg-primary/15 text-primary">
                     {project.builtFor}
                   </span>
-                  <span className="px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded bg-text/10 text-text/60">
-                    {project.achievement}
-                  </span>
+                  {project.achievement && (
+                    <span className="px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded bg-text/10 text-text/60">
+                      {project.achievement}
+                    </span>
+                  )}
                 </div>
 
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-text mb-2">
                   {project.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-primary/80 mb-3 sm:mb-4">{project.event}</p>
+                <p className="text-xs sm:text-sm text-primary/80 mb-3 sm:mb-4">
+                  {project.event}
+                </p>
                 <p className="text-text/70 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                   {project.description}
                 </p>
