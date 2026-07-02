@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import projectsData from "../data/project.json";
+import SectionHeading from "./SectionHeading";
 
 const images = import.meta.glob("../assets/projects/*", {
   eager: true,
@@ -19,15 +20,10 @@ const ProjectList = () => {
 
   return (
     <section className="py-20 px-6 md:px-12 lg:px-20 xl:px-48">
-      <motion.h2
-        initial={{ y: 30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl sm:text-4xl font-bold text-text text-center mb-16"
-      >
-        Other Projects
-      </motion.h2>
+      <SectionHeading
+        title="Other Projects"
+        subtitle="More things I've designed, built, and shipped. Click any project for the full story."
+      />
 
       {/* List view (first 3) */}
       <AnimatePresence mode="wait">
@@ -50,7 +46,7 @@ const ProjectList = () => {
               >
                 <Link
                   to={`/project/${project.slug}`}
-                  className="group flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 rounded-xl p-4 hover:bg-text/5 transition-colors border-b border-text/10"
+                  className="group flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 rounded-2xl p-4 border border-text/10 bg-surface/30 hover:bg-surface/60 hover:border-primary/30 transition-colors"
                 >
                   <div className="shrink-0 w-full sm:w-[150px] h-[180px] sm:h-[110px] rounded-lg overflow-hidden bg-background border border-text/10">
                     {project.image ? (
@@ -71,7 +67,7 @@ const ProjectList = () => {
                       <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-text">
                         {project.title}
                       </h3>
-                      <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded bg-primary/15 text-primary">
+                      <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded border border-text/20 text-text/60">
                         {project.builtFor}
                       </span>
                     </div>
@@ -119,7 +115,7 @@ const ProjectList = () => {
               >
                 <Link
                   to={`/project/${project.slug}`}
-                  className="group block rounded-xl overflow-hidden border border-text/10 hover:border-primary/30 transition-colors"
+                  className="group block h-full rounded-2xl overflow-hidden border border-text/10 bg-surface/30 hover:bg-surface/60 hover:border-primary/30 transition-colors"
                 >
                   <div className="w-full h-[160px] sm:h-[180px] bg-background">
                     {project.image ? (
@@ -148,7 +144,7 @@ const ProjectList = () => {
                       {project.description}
                     </p>
                     <div className="flex items-center gap-2 mt-3">
-                      <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded bg-primary/15 text-primary">
+                      <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded border border-text/20 text-text/60">
                         {project.builtFor}
                       </span>
                     </div>
@@ -175,9 +171,9 @@ const ProjectList = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowAll(!showAll)}
-          className="px-6 py-3 border border-text/20 text-text/70 rounded hover:bg-text/10 hover:text-text transition-colors"
+          className="px-7 py-3 rounded-full border border-text/20 text-text/70 text-sm font-semibold hover:border-primary hover:text-primary transition-colors"
         >
-          {showAll ? "Show Less" : "View All Projects"}
+          {showAll ? "Show less" : "Show all projects"}
         </motion.button>
       </div>
     </section>

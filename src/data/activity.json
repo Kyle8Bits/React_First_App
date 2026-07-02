@@ -1,38 +1,38 @@
 [
   {
-    "src": "delivering_smile.png",
+    "src": "delivering_smile.webp",
     "alt": "Delivering Smile",
     "description": "SAT Delivering Smile 2025 - Organizer",
     "detail": "SAT Delivering Smiles 2025 is a community initiative focused on supporting underprivileged communities through volunteer work, fundraising, and social activities. Inspired by the spirit of unity and resilience, the campaign aims to bring meaningful support, resources, and encouragement to those in need. As part of the organizing team, we worked to plan events, coordinate volunteers, and deliver community support programs that created a positive social impact."
   },
   {
-    "src": "charity_sat.JPG",
+    "src": "charity_sat.webp",
     "alt": "Group 5 Charity",
     "description": "SAT Group 5 Charity",
     "detail": "SAT Group 5 Charity was a volunteer charity event organized by members of SAT Group 5, where we distributed free meals and provided support to people in need."
   },
   {
-    "src": "team_building.png",
+    "src": "team_building.webp",
     "alt": "SAT Team Building",
     "description": "SAT Team Building",
     "detail": "SAT Teambuilding is an annual team-building event organized by the Student Recruitment Department at RMIT, with the participation of proactive members from SAT. The event is an opportunity to reflect on the past year, celebrate achievements, and appreciate everyone's contributions."
   },
   {
-    "src": "neo_league.png",
+    "src": "ex_day.webp",
+    "alt": "RMIT EXPERIENCE DAY 2025",
+    "description": "RMIT Experience Day 2025 - Core Team",
+    "detail": "Core Team Member for RMIT Experience Day 2025, responsible for guiding participants, ensuring event activities ran according to plan, and managing the overall event flow."
+  },
+  {
+    "src": "neo_league.webp",
     "alt": "Neo League 2025",
     "description": "Neo League 2025 - Prompt The Future - Core Team",
     "detail": "RMIT Neo League 2025 - Prompt The Future was a large-scale technology and innovation competition organized by the RMIT Neo Culture Tech Club (NCT), with participation from students across Ho Chi Minh City and Hanoi. As a core team member, I was involved in organizing and coordinating the competition over three months, including planning, operations, and event execution. The experience involved teamwork, problem-solving, event management, and working under pressure to successfully deliver the final competition event."
   },
   {
-    "src": "nct_workshop.png",
+    "src": "nct_workshop.webp",
     "alt": "NCT Workshop",
     "description": "GitHub and SolidWorks Workshop Host",
     "detail": "Planned and delivered beginner workshops on GitHub and SolidWorks for NCT Club members, teaching version control, collaboration workflows, and basic 3D design. This involved preparing teaching materials, presenting technical concepts, and guiding participants through hands-on exercises."
-  },
-  {
-    "src": "ex_day.png",
-    "alt": "RMIT EXPERIENCE DAY 2025",
-    "description": "RMIT Experience Day 2025 - Core Team",
-    "detail": "Core Team Member for RMIT Experience Day 2025, responsible for guiding participants, ensuring event activities ran according to plan, and managing the overall event flow."
   }
 ]

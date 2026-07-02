@@ -1,53 +1,88 @@
-import profileImg from "../assets/me/Khoa_DEV_PNG.png";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import profileImg from "../assets/me/Khoa_DEV_PNG.webp";
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
+  { label: "Awards", href: "#awards" },
   { label: "Activities", href: "#activities" },
 ];
 
+const stats = [
+  { value: "2×", label: "Hackathon Champion" },
+  { value: "11+", label: "Projects Shipped" },
+  { value: "1", label: "Startup Founded" },
+];
+
 const Heading = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 24));
+
   return (
-    <section className="relative min-h-[80%] overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Navbar */}
       <motion.nav
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="flex items-center justify-between px-6 md:px-12 lg:px-20 py-6"
+        className={`fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 md:px-12 lg:px-20 py-4 transition-all duration-300 ${
+          scrolled
+            ? "bg-background/70 backdrop-blur-xl border-b border-text/10"
+            : "bg-transparent border-b border-transparent"
+        }`}
       >
-        <span className="text-text text-lg font-semibold tracking-wide">
-          Kyle Porfolio
-        </span>
-        <ul className="hidden sm:flex gap-6 md:gap-8">
-          {navLinks.map((link, i) => (
-            <motion.li
-              key={link.label}
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.1 * i }}
-            >
-              <a
-                href={link.href}
-                className="text-text/70 text-sm hover:text-primary transition-colors"
-              >
-                {link.label}
-              </a>
-            </motion.li>
-          ))}
-        </ul>
+        <a href="#" className="font-display text-xl font-bold text-text tracking-wide">
+          Kyle Mai<span className="text-primary">.</span>
+        </a>
+        <div className="flex items-center gap-6 md:gap-8">
+          <ul className="hidden sm:flex gap-6 md:gap-8">
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="text-text/60 text-sm font-medium hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contact"
+            className="px-4 py-2 text-sm font-semibold rounded-full border border-primary/50 text-primary hover:bg-primary hover:text-background active:scale-[0.98] transition-all"
+          >
+            Contact
+          </a>
+        </div>
       </motion.nav>
 
       {/* Hero */}
-      <div className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-20 xl:px-48 mt-12 md:mt-16 lg:mt-24 gap-12 lg:gap-0">
+      <div className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-20 xl:px-48 pt-24 gap-12 lg:gap-0">
         {/* Left content */}
         <div className="z-10 max-w-xl text-center lg:text-left">
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-text/15 bg-surface/60 backdrop-blur mb-8"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping motion-reduce:animate-none absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+            </span>
+            <span className="text-text/70 text-xs font-medium tracking-wide">
+              Open to opportunities
+            </span>
+          </motion.div>
+
           <motion.h1
             initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-text leading-none"
           >
             Hello<span className="text-primary">.</span>
           </motion.h1>
@@ -55,117 +90,49 @@ const Heading = () => {
           <motion.div
             initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
             className="flex items-center justify-center lg:justify-start gap-4 mt-6"
           >
             <span className="block w-12 h-[2px] bg-primary" />
-            <p className="text-text/80 text-lg sm:text-xl lg:text-2xl">
-              I'm Kyle
-            </p>
+            <p className="text-text/80 text-lg sm:text-xl lg:text-2xl">I'm Kyle</p>
           </motion.div>
 
           <motion.h2
             initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text mt-4"
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 text-gradient"
           >
             Software Engineer
           </motion.h2>
 
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.65 }}
+            className="text-text/60 text-base sm:text-lg leading-relaxed mt-6 max-w-md mx-auto lg:mx-0"
+          >
+            I build full-stack products, IoT systems, and AI-powered tools,
+            from hackathon winners to enterprise platforms.
+          </motion.p>
+
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex justify-center lg:justify-start gap-4 mt-10"
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-8"
           >
             <a
-              href="https://www.linkedin.com/in/kylemai261/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-text/20 rounded-full text-text/70 hover:text-primary hover:border-primary transition-colors"
-              aria-label="LinkedIn"
+              href="#projects"
+              className="px-6 py-3 rounded-full bg-primary text-background text-sm font-bold hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect width="4" height="12" x="2" y="9" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
+              View My Work
             </a>
             <a
-              href="https://www.facebook.com/kyle.mai261/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-text/20 rounded-full text-text/70 hover:text-primary hover:border-primary transition-colors"
-              aria-label="Facebook"
+              href="#contact"
+              className="px-6 py-3 rounded-full border border-text/20 text-text/80 text-sm font-semibold hover:border-primary hover:text-primary active:scale-[0.98] transition-all"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg>
-            </a>
-            <a
-              href="https://github.com/Kyle8Bits"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-text/20 rounded-full text-text/70 hover:text-primary hover:border-primary transition-colors"
-              aria-label="GitHub"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                <path d="M9 18c-4.51 2-5-2-7-2" />
-              </svg>
-            </a>
-            <a
-              href="mailto:khoamaidang2611@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 border border-text/20 rounded-full text-text/70 hover:text-primary hover:border-primary transition-colors"
-              aria-label="Gmail"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
+              Get in touch
             </a>
           </motion.div>
         </div>
@@ -177,11 +144,11 @@ const Heading = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative flex items-center justify-center w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:w-[560px] lg:h-[560px] shrink-0"
         >
-          {/* Decorative rings */}
+          <div className="absolute w-[240px] sm:w-[320px] lg:w-[420px] h-[240px] sm:h-[320px] lg:h-[420px] rounded-full bg-primary/15 blur-[80px]" />
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-            className="absolute w-[280px] sm:w-[360px] lg:w-[480px] h-[280px] sm:h-[360px] lg:h-[480px] rounded-full border-2 border-primary/30"
+            className="absolute w-[280px] sm:w-[360px] lg:w-[480px] h-[280px] sm:h-[360px] lg:h-[480px] rounded-full border-2 border-dashed border-primary/30"
           />
           <motion.div
             animate={{ rotate: -360 }}
@@ -190,22 +157,34 @@ const Heading = () => {
           />
           <div className="absolute w-[300px] sm:w-[380px] lg:w-[500px] h-[300px] sm:h-[380px] lg:h-[500px] rounded-full border-[3px] border-primary/40 top-4 left-4" />
 
-          {/* Decorative arrows */}
-          <span className="absolute -right-2 top-1/2 text-primary/50 text-2xl lg:text-3xl">
-            &rsaquo;&rsaquo;
-          </span>
-          <span className="absolute -left-2 top-1/2 text-primary/50 text-2xl lg:text-3xl">
-            &lsaquo;&lsaquo;
-          </span>
-
-          {/* Profile image */}
           <img
             src={profileImg}
-            alt="Kyle"
+            alt="Kyle Mai, software engineer"
             className="relative z-10 w-[220px] sm:w-[280px] lg:w-[360px] h-[290px] sm:h-[370px] lg:h-[480px] object-cover object-top rounded-b-full"
           />
         </motion.div>
       </div>
+
+      {/* Stats strip */}
+      <motion.div
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, delay: 1.1 }}
+        className="relative z-10 px-6 md:px-12 lg:px-20 xl:px-48 mt-16 lg:mt-8 pb-8"
+      >
+        <div className="grid grid-cols-3 divide-x divide-text/10 rounded-2xl border border-text/10 bg-surface/40 backdrop-blur">
+          {stats.map((stat) => (
+            <div key={stat.label} className="py-5 sm:py-6 text-center">
+              <p className="font-display text-2xl sm:text-3xl font-bold text-primary">
+                {stat.value}
+              </p>
+              <p className="text-text/50 text-[11px] sm:text-sm mt-1 px-2">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };

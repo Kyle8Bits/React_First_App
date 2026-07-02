@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
 import Lenis from "lenis";
 import Dashboard from "./pages/Dashboard";
 import ProjectPage from "./pages/ProjectPage";
@@ -7,6 +8,13 @@ import FloatingShapes from "./components/FloatingShapes";
 
 function App() {
   useEffect(() => {
+    // Reduced-motion users get native scrolling; sections keep their
+    // scroll-mt offset so plain anchor jumps still clear the fixed navbar.
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
     const lenis = new Lenis();
 
     function raf(time: number) {
@@ -24,7 +32,12 @@ function App() {
       const href = anchor.getAttribute("href");
       if (href && href.startsWith("#")) {
         e.preventDefault();
-        lenis.scrollTo(href, { offset: -40 });
+        if (href === "#") {
+          lenis.scrollTo(0);
+          return;
+        }
+        // Offset accounts for the fixed navbar height
+        lenis.scrollTo(href, { offset: -80 });
       }
     };
 
@@ -37,15 +50,17 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <FloatingShapes />
-      <main className="relative z-10 text-text">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/project/:slug" element={<ProjectPage />} />
-        </Routes>
-      </main>
-    </BrowserRouter>
+    <MotionConfig reducedMotion="user">
+      <BrowserRouter>
+        <FloatingShapes />
+        <main className="relative z-10 text-text">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/project/:slug" element={<ProjectPage />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </MotionConfig>
   );
 }
 

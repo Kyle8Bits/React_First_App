@@ -1,11 +1,77 @@
+/* Self-hosted fonts (font-display: swap built into Fontsource) */
+@import "@fontsource/syne/700.css";
+@import "@fontsource/instrument-sans/400.css";
+@import "@fontsource/instrument-sans/500.css";
+@import "@fontsource/instrument-sans/600.css";
+@import "@fontsource/instrument-sans/700.css";
 @import "tailwindcss";
 
 @theme {
   --color-primary: #ff6f5a;
-  --color-background: #121e28;
+  --color-background: #0c151e;
+  --color-surface: #16222e;
   --color-text: #fafcfa;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
   background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* Subtle themed scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(250, 252, 250, 0.15);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 111, 90, 0.5);
+}
+
+/* Fades marquee rows out at the viewport edges */
+.fade-edges-x {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+/* Coral-to-warm gradient for headline accents */
+.text-gradient {
+  background: linear-gradient(100deg, #ff6f5a 0%, #ffb199 60%, #ff6f5a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Seamless photo-strip marquee: track holds two copies, shifts one copy's width */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

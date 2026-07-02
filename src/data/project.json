@@ -3,56 +3,107 @@
     "slug": "enteprise_chatbot",
     "title": "Enterprise Chatbot",
     "description": "An enterprise chatbot platform that lets organizations chat with their documents, providing answers with citations and real-time responses. It includes easy document uploads, secure login, and management tools. Built with a clear structure, it uses advanced AI to process and understand documents, while also generating images when needed. The platform is designed to keep everything simple and well-organized for users.",
-    "image": "enterprise_chatbot.png",
-    "tags": ["React", "Bun.js", "Redis", "Weaviate", "Min.IO"],
-    "builtFor": "Professional Project"
+    "image": "enterprise_chatbot.webp",
+    "tags": [
+      "React",
+      "Bun.js",
+      "Redis",
+      "Weaviate",
+      "Min.IO"
+    ],
+    "builtFor": "Professional Project",
+    "github": null,
+    "link": null
   },
   {
     "slug": "devision",
     "title": "Devision",
     "description": "Job Matching & Recruitment Platform. Designed and implemented a microservices architecture for applicant and employer management systems. Built an event-driven data integration pipeline using Apache Kafka to synchronize data across services. Developed the frontend with Headless UI for customizable and accessible UI components. Enabled real-time job and candidate notifications to improve recruitment responsiveness.",
-    "image": "devision.png",
-    "tags": ["React", "Spring Boot", "Headless UI", "Kafka", "Micro-services"],
-    "builtFor": "Course Project"
+    "image": "devision.webp",
+    "tags": [
+      "React",
+      "Spring Boot",
+      "Headless UI",
+      "Kafka",
+      "Micro-services"
+    ],
+    "builtFor": "Course Project",
+    "github": "https://github.com/ISYS3461-2025C-Atalanta-DEVision",
+    "link": null
   },
   {
     "slug": "scootrio",
     "title": "Scootr.io",
     "description": "Scootr.io is a real-time smart mobility platform that lets users find, book, ride, and return scooters through an intuitive web interface and a Raspberry Pi backend system. It supports role-based logins for customers, admins, and engineers, and integrates services like Google Calendar, Stripe, and cloud-based MySQL for seamless functionality.",
-    "image": "scootr_io.png",
-    "tags": ["Java", "Spring Boot", "PostgreSQL"],
-    "builtFor": "Course Project"
+    "image": "scootr_io.webp",
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL"
+    ],
+    "builtFor": "Course Project",
+    "github": "https://github.com/Kyle8Bits/smart_scooter_iot",
+    "link": "https://youtu.be/pwnSwjbeF80?si=DoLFjS58ipk2RKTw"
   },
   {
     "slug": "facp_evn",
     "title": "FACP Monitoring System",
     "description": "Built an industrial Fire Alarm Control Panel (FACP) monitoring system using BACnet UDP for device communication, AWS IoT Core with MQTT for cloud data transmission, a backend service for data processing, and WebSocket for real-time frontend updates. The system allows operators to monitor alarm status, device conditions, and system events in real time through a web-based dashboard. Developed for EVN Industry to improve monitoring reliability and centralized system visibility.",
-    "image": "facp_evn.png",
-    "tags": ["React", "BACnet", "Web-Socket", "SQLite", "AWS"],
-    "builtFor": "EVN Project"
+    "image": "facp_evn.webp",
+    "tags": [
+      "React",
+      "BACnet",
+      "Web-Socket",
+      "SQLite",
+      "AWS"
+    ],
+    "builtFor": "EVN Project",
+    "github": null,
+    "link": null
   },
   {
     "slug": "smart_esp",
     "title": "SmartESP - House Controlling IoT System",
     "description": "SmartESP is an IoT-based project designed to simulate a smart home environment using an ESP32 microcontroller and the MERN stack (MongoDB, Express.js, React.js, Node.js). This project allows users to remotely control and monitor devices such as LED lights, fans, and sensors, creating a seamless and intelligent home automation experience.",
-    "image": "smart_esp.png",
-    "tags": ["React", "ESP32", "MongoDB", "RestAPI"],
-    "builtFor": "Ho Chi Minh City University of Agriculture and Forestry Collaboration"
+    "image": "smart_esp.webp",
+    "tags": [
+      "React",
+      "ESP32",
+      "MongoDB",
+      "RestAPI"
+    ],
+    "builtFor": "Ho Chi Minh City University of Agriculture and Forestry Collaboration",
+    "github": "https://github.com/Kyle8Bits/SmartESP",
+    "link": "https://youtu.be/F_8oUVvyJmY?si=BI9McIyzVUBWZjan"
   },
   {
     "slug": "rent_mate",
     "title": "Rent Mate",
-    "description": "The RentMate Smart Rental Property Management System is a web-based platform designed to streamline rental operations for landlords, tenants, and property managers. Its primary purpose is to centralize the management of rental properties by integrating property listings, lease management, communication, payments, maintenance requests, and document handling into a single unified system. RentMate aims to address common challenges in the rental ecosystem—such as fragmented communication, manual payment tracking, inefficient maintenance coordination, and limited visibility into rental activities—by providing an intuitive, secure, and modern digital solution. The product supports the full lifecycle of rental interactions, from listing and searching for properties to managing active tenancies and historical records.",
-    "image": "rent_mate.png",
-    "tags": ["React", "Node.js", "RabbitMQ", "Supabase"],
-    "builtFor": "Course Project"
+    "description": "The RentMate Smart Rental Property Management System is a web-based platform designed to streamline rental operations for landlords, tenants, and property managers. Its primary purpose is to centralize the management of rental properties by integrating property listings, lease management, communication, payments, maintenance requests, and document handling into a single unified system. RentMate aims to address common challenges in the rental ecosystem (fragmented communication, manual payment tracking, inefficient maintenance coordination, and limited visibility into rental activities) by providing an intuitive, secure, and modern digital solution. The product supports the full lifecycle of rental interactions, from listing and searching for properties to managing active tenancies and historical records.",
+    "image": "rent_mate.webp",
+    "tags": [
+      "React",
+      "Node.js",
+      "RabbitMQ",
+      "Supabase"
+    ],
+    "builtFor": "Course Project",
+    "github": "https://github.com/Kyle8Bits/RentMate",
+    "link": null
   },
   {
     "slug": "arduino_rc",
     "title": "Arduino RC Car",
     "description": "A remote-controlled car built using an Mini Arduino, Bluetooth module, motor control board, and the Dabble mobile app library. The car is controlled wirelessly via a smartphone, allowing real-time movement control through Bluetooth communication. This project demonstrates embedded systems development, wireless communication, and hardware-software integration.",
-    "image": "arduino_rc.png",
-    "tags": ["C++", "Arduino", "JDY-33 BT Module", "Dabble"],
-    "builtFor": "Club Project"
+    "image": "arduino_rc.webp",
+    "tags": [
+      "C++",
+      "Arduino",
+      "JDY-33 BT Module",
+      "Dabble"
+    ],
+    "builtFor": "Club Project",
+    "github": "https://github.com/Kyle8Bits/Arduino_Remote_RC_Car",
+    "link": "https://youtu.be/myx7Zmuy4rU?si=8bMaEsgWWfKyqWXb"
   }
 ]

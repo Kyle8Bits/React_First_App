@@ -2,37 +2,67 @@
   {
     "title": "AgentShield - Every tool call, verified",
     "description": "AgentShield is a self-evolving security gateway that sits between your AI agent and the tools it calls. Every time an agent tries to execute an action - reading a file, calling an API, sending a message, running a command - AgentShield intercepts the request, scores its risk, and decides what happens next.",
-    "image": "agent_shield.png",
-    "tags": ["React", "Node.js", "MCP Proxy", "Qwen LLM", "Codex", "Tiny Fish"],
+    "image": "agent_shield.webp",
+    "tags": [
+      "React",
+      "Node.js",
+      "MCP Proxy",
+      "Qwen LLM",
+      "Codex",
+      "Tiny Fish"
+    ],
     "builtFor": "Hackathon",
     "event": "LotusHack 2026",
-    "achievement": "1st Place - Best use of Qwen"
+    "achievement": "1st Place - Best use of Qwen",
+    "github": null,
+    "link": "https://agentshield.work/"
   },
   {
-    "title": "SnapClaim - Faster,smarter claim submissions",
+    "title": "SnapClaim - Faster, smarter claim submissions",
     "description": "SnapClaim, transforms the insurance claims process by introducing a collaborative AI agent that not only helps users submit claims but also ensures transparency and context throughout the process.",
-    "image": "snap_claim.png",
-    "tags": ["React", "Spring Boot", "OCR", "OpenAI"],
+    "image": "snap_claim.webp",
+    "tags": [
+      "React",
+      "Spring Boot",
+      "OCR",
+      "OpenAI"
+    ],
     "builtFor": "Hackathon",
     "event": "CoverGo AI Hackathon",
-    "achievement": "Champion"
+    "achievement": "Champion",
+    "github": "https://github.com/Kyle8Bits/Hackathon_2025_team4",
+    "link": null
   },
   {
     "title": "Debatium",
-    "description": "Debatium is Vietnam’s leading smart matchmaking platform for academic debate. We help debaters find sparring partners and judges that perfectly match their skill level, schedule, and format (BP, WSDC, etc.) in just a few clicks—replacing the chaos of Facebook Groups and Messenger threads.",
-    "image": "debatium.png",
-    "tags": ["React", "Node.js", "Supabase", "PostHog"],
+    "description": "Debatium is Vietnam’s leading smart matchmaking platform for academic debate. We help debaters find sparring partners and judges that perfectly match their skill level, schedule, and format (BP, WSDC, etc.) in just a few clicks, replacing the chaos of Facebook Groups and Messenger threads.",
+    "image": "debatium.webp",
+    "tags": [
+      "React",
+      "Node.js",
+      "Supabase",
+      "PostHog"
+    ],
     "builtFor": "Startups",
     "event": "Venture X",
-    "achievement": null
+    "achievement": null,
+    "github": null,
+    "link": "https://debatium.org/"
   },
   {
     "title": "Kyky's Street",
     "description": "After losing his mother in a tragic traffic accident, Kyky sets out on a dangerous journey to find a new family. Along the way, he meets other young souls who were also torn apart by unsafe roads. Together, they navigate Vietnam’s traffic challenges and your choices will determine whether they survive the journey and find the family they long for.",
-    "image": "kyky_street.png",
-    "tags": ["XCode", "Swift", "Firebase", "Google SDK"],
+    "image": "kyky_street.webp",
+    "tags": [
+      "XCode",
+      "Swift",
+      "Firebase",
+      "Google SDK"
+    ],
     "builtFor": "Course Project",
     "event": "Project Showcase at RMIT Experience Day 2025",
-    "achievement": "Showcase Best Project"
+    "achievement": "Showcase Best Project",
+    "github": "https://github.com/Kyle8Bits/Kyky-s-street",
+    "link": null
   }
 ]
