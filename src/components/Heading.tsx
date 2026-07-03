@@ -37,7 +37,7 @@ const Heading = () => {
         <a href="#" className="font-display text-xl font-bold text-text tracking-wide">
           Kyle Mai<span className="text-primary">.</span>
         </a>
-        <div className="flex items-center gap-6 md:gap-8">
+        <div className="flex items-center gap-3 md:gap-6">
           <ul className="hidden sm:flex gap-6 md:gap-8">
             {navLinks.map((link) => (
               <li key={link.label}>
@@ -50,6 +50,17 @@ const Heading = () => {
               </li>
             ))}
           </ul>
+          <button
+            type="button"
+            onClick={() =>
+              window.dispatchEvent(new CustomEvent("command-palette:toggle"))
+            }
+            aria-label="Open command palette"
+            className="hidden md:inline-flex items-center gap-2 px-2.5 py-1.5 rounded-md border border-text/15 bg-surface/60 hover:border-primary/50 hover:text-primary text-text/50 text-xs font-medium transition-colors cursor-pointer"
+          >
+            <span>Quick nav</span>
+            <kbd className="px-1.5 py-0.5 rounded bg-text/10 text-[10px]">⌘K</kbd>
+          </button>
           <a
             href="#contact"
             className="px-4 py-2 text-sm font-semibold rounded-full border border-primary/50 text-primary hover:bg-primary hover:text-background active:scale-[0.98] transition-all"

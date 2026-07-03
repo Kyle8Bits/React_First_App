@@ -102,13 +102,13 @@ const MajorProjects = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="group relative w-full lg:w-1/2 h-[200px] sm:h-[280px] md:h-[350px] rounded-2xl overflow-hidden bg-surface border border-text/10 hover:border-primary/40 transition-colors shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+                className="group relative w-full lg:w-1/2 h-[200px] sm:h-[280px] md:h-[350px] rounded-2xl overflow-hidden bg-background border border-text/10 hover:border-primary/40 transition-colors shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
               >
                 {project.image ? (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-[1.04] transition-transform duration-700"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-text/30 text-lg">

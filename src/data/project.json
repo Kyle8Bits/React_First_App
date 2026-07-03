@@ -2,7 +2,7 @@
   {
     "slug": "enteprise_chatbot",
     "title": "Enterprise Chatbot",
-    "description": "An enterprise chatbot platform that lets organizations chat with their documents, providing answers with citations and real-time responses. It includes easy document uploads, secure login, and management tools. Built with a clear structure, it uses advanced AI to process and understand documents, while also generating images when needed. The platform is designed to keep everything simple and well-organized for users.",
+    "description": "An enterprise chatbot platform that lets organizations chat with their documents — answers cite the exact paragraph they came from, uploads and access are managed by admins, and the system streams responses in real time.",
     "image": "enterprise_chatbot.webp",
     "tags": [
       "React",
@@ -12,6 +12,17 @@
       "Min.IO"
     ],
     "builtFor": "Professional Project",
+    "role": "Full-stack Engineer",
+    "timeline": "3 months",
+    "problem": "Internal knowledge lived in scattered PDFs and wikis. Employees wasted hours hunting for policies, and generic LLM chatbots hallucinated when asked company-specific questions — a dealbreaker for compliance and legal teams.",
+    "approach": "Built a RAG pipeline around Weaviate for hybrid semantic + keyword search, with per-tenant document isolation. Every answer is grounded in retrieved chunks and links back to the exact source paragraph. Bun.js handles streaming over SSE for sub-second first-token latency; Redis caches session state; Min.IO stores raw uploads. Admins manage users, docs, and access from a React dashboard.",
+    "stack": [
+      { "label": "Frontend", "items": ["React", "TypeScript", "Tailwind"] },
+      { "label": "Backend", "items": ["Bun.js", "SSE streaming", "REST"] },
+      { "label": "AI / Search", "items": ["Weaviate", "Hybrid retrieval", "RAG with citations"] },
+      { "label": "Infra", "items": ["Redis", "Min.IO", "Docker"] }
+    ],
+    "outcome": "Shipped to production with SSO login, per-tenant document isolation, and citation-backed answers. Every response links to the paragraph it came from — zero hallucinated answers in compliance review.",
     "github": null,
     "link": null
   },

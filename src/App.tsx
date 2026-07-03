@@ -5,6 +5,8 @@ import Lenis from "lenis";
 import Dashboard from "./pages/Dashboard";
 import ProjectPage from "./pages/ProjectPage";
 import FloatingShapes from "./components/FloatingShapes";
+import InteractiveParticles from "./components/InteractiveParticles";
+import CommandPalette from "./components/CommandPalette";
 
 function App() {
   useEffect(() => {
@@ -53,6 +55,8 @@ function App() {
     <MotionConfig reducedMotion="user">
       <BrowserRouter>
         <FloatingShapes />
+        <InteractiveParticles />
+        <CommandPalette />
         <main className="relative z-10 text-text">
           <Routes>
             <Route path="/" element={<Dashboard />} />

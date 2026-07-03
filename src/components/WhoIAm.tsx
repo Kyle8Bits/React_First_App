@@ -30,7 +30,7 @@ const WhoIAm = () => {
     <section id="about" className="py-20 overflow-hidden scroll-mt-20">
       <SectionHeading
         title="Who I Am"
-        subtitle="Hover a photo to see the story behind it."
+        subtitle="Hover or tap a photo to see the story behind it."
       />
 
       <div
