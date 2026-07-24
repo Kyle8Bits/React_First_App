@@ -1,16 +1,29 @@
 [
   {
+    "slug": "simforge-rift-legends",
+    "title": "SimForge: Rift Legends",
+    "description": "Three AI agents that compress the live-service game patch cycle from weeks to hours. The Telemetry Intelligence agent watches deploys in real time and ranks balance recommendations; the A/B Testing agent owns the full experiment lifecycle end-to-end; the Data Transformation agent turns raw event logs into analysis-ready datasets — no custom SQL required.",
+    "image": "simforge.webp",
+    "tags": ["AI Agents", "LLM", "Game Analytics", "Telemetry", "A/B Testing", "PixiJs"],
+    "builtFor": "Hackathon",
+    "problem": "Live-service game teams generate hundreds of millions of telemetry events per day, yet turning that data into a confident patch decision takes weeks of cross-functional back-and-forth. A patch ships Tuesday, forums are on fire by Wednesday, and by Thursday 14 people are in a meeting with no clean answer to what went wrong. Trends have a shelf life measured in hours, but the human loop between deploy and understanding lags days behind the players it's meant to serve.",
+    "approach": "Three purpose-built agents cover the full decision lifecycle:\n\n• Telemetry Intelligence — continuously monitors post-patch player behavior, correlates changes across interconnected systems (skills, dungeons, economy), and produces ranked balance recommendations with confidence scores.\n\n• A/B Testing — owns cohort assignment, KPI tracking, statistical significance detection, and automated promotion of winning variants. Replaces \"I think Variant A felt better\" with \"Variant A won on 4 of 5 KPIs at p < 0.01.\"\n\n• Data Transformation — ingests raw event logs and outputs clean, structured, analysis-ready datasets in formats analysts and even robotics systems can consume directly.",
+    "stack": [
+      { "label": "Agents", "items": ["Claude", "LangGraph"] },
+      { "label": "Data", "items": ["ClickHouse", "DuckDB"] },
+      { "label": "Backend", "items": ["FastAPI", "Python"] },
+      { "label": "Frontend", "items": ["React", "PixiJS", "TypeScript"] }
+    ],
+    "github": null,
+    "link": null,
+    "submission": "https://aitalent.genaifund.ai/hackathon/my-projects?view=e15f706e-841a-471e-ba83-d16139cb8d48"
+  },
+  {
     "slug": "enteprise_chatbot",
     "title": "Enterprise Chatbot",
     "description": "An enterprise chatbot platform that lets organizations chat with their documents — answers cite the exact paragraph they came from, uploads and access are managed by admins, and the system streams responses in real time.",
     "image": "enterprise_chatbot.webp",
-    "tags": [
-      "React",
-      "Bun.js",
-      "Redis",
-      "Weaviate",
-      "Min.IO"
-    ],
+    "tags": ["React", "Bun.js", "Redis", "Weaviate", "Min.IO"],
     "builtFor": "Professional Project",
     "role": "Full-stack Engineer",
     "timeline": "3 months",
@@ -19,7 +32,10 @@
     "stack": [
       { "label": "Frontend", "items": ["React", "TypeScript", "Tailwind"] },
       { "label": "Backend", "items": ["Bun.js", "SSE streaming", "REST"] },
-      { "label": "AI / Search", "items": ["Weaviate", "Hybrid retrieval", "RAG with citations"] },
+      {
+        "label": "AI / Search",
+        "items": ["Weaviate", "Hybrid retrieval", "RAG with citations"]
+      },
       { "label": "Infra", "items": ["Redis", "Min.IO", "Docker"] }
     ],
     "outcome": "Shipped to production with SSO login, per-tenant document isolation, and citation-backed answers. Every response links to the paragraph it came from — zero hallucinated answers in compliance review.",
@@ -31,14 +47,14 @@
     "title": "Devision",
     "description": "Job Matching & Recruitment Platform. Designed and implemented a microservices architecture for applicant and employer management systems. Built an event-driven data integration pipeline using Apache Kafka to synchronize data across services. Developed the frontend with Headless UI for customizable and accessible UI components. Enabled real-time job and candidate notifications to improve recruitment responsiveness.",
     "image": "devision.webp",
-    "tags": [
-      "React",
-      "Spring Boot",
-      "Headless UI",
-      "Kafka",
-      "Micro-services"
-    ],
+    "tags": ["React", "Spring Boot", "Headless UI", "Kafka", "Micro-services"],
     "builtFor": "Course Project",
+    "stack": [
+      { "label": "Frontend", "items": ["React", "Headless UI"] },
+      { "label": "Backend", "items": ["Spring Boot", "Java"] },
+      { "label": "Messaging", "items": ["Apache Kafka"] },
+      { "label": "Architecture", "items": ["Microservices", "Event-driven"] }
+    ],
     "github": "https://github.com/ISYS3461-2025C-Atalanta-DEVision",
     "link": null
   },
@@ -47,12 +63,17 @@
     "title": "Scootr.io",
     "description": "Scootr.io is a real-time smart mobility platform that lets users find, book, ride, and return scooters through an intuitive web interface and a Raspberry Pi backend system. It supports role-based logins for customers, admins, and engineers, and integrates services like Google Calendar, Stripe, and cloud-based MySQL for seamless functionality.",
     "image": "scootr_io.webp",
-    "tags": [
-      "Java",
-      "Spring Boot",
-      "PostgreSQL"
-    ],
+    "tags": ["Java", "Spring Boot", "PostgreSQL"],
     "builtFor": "Course Project",
+    "stack": [
+      { "label": "Frontend", "items": ["React"] },
+      { "label": "Backend", "items": ["Java", "Spring Boot"] },
+      { "label": "Data", "items": ["PostgreSQL"] },
+      {
+        "label": "Hardware & Integrations",
+        "items": ["Raspberry Pi", "Stripe", "Google Calendar"]
+      }
+    ],
     "github": "https://github.com/Kyle8Bits/smart_scooter_iot",
     "link": "https://youtu.be/pwnSwjbeF80?si=DoLFjS58ipk2RKTw"
   },
@@ -61,14 +82,17 @@
     "title": "FACP Monitoring System",
     "description": "Built an industrial Fire Alarm Control Panel (FACP) monitoring system using BACnet UDP for device communication, AWS IoT Core with MQTT for cloud data transmission, a backend service for data processing, and WebSocket for real-time frontend updates. The system allows operators to monitor alarm status, device conditions, and system events in real time through a web-based dashboard. Developed for EVN Industry to improve monitoring reliability and centralized system visibility.",
     "image": "facp_evn.webp",
-    "tags": [
-      "React",
-      "BACnet",
-      "Web-Socket",
-      "SQLite",
-      "AWS"
-    ],
+    "tags": ["React", "BACnet", "Web-Socket", "SQLite", "AWS"],
     "builtFor": "EVN Project",
+    "stack": [
+      { "label": "Frontend", "items": ["React", "WebSocket"] },
+      { "label": "Backend", "items": ["Node.js"] },
+      { "label": "Data", "items": ["SQLite"] },
+      {
+        "label": "IoT & Cloud",
+        "items": ["BACnet UDP", "AWS IoT Core", "MQTT"]
+      }
+    ],
     "github": null,
     "link": null
   },
@@ -77,13 +101,14 @@
     "title": "SmartESP - House Controlling IoT System",
     "description": "SmartESP is an IoT-based project designed to simulate a smart home environment using an ESP32 microcontroller and the MERN stack (MongoDB, Express.js, React.js, Node.js). This project allows users to remotely control and monitor devices such as LED lights, fans, and sensors, creating a seamless and intelligent home automation experience.",
     "image": "smart_esp.webp",
-    "tags": [
-      "React",
-      "ESP32",
-      "MongoDB",
-      "RestAPI"
-    ],
+    "tags": ["React", "ESP32", "MongoDB", "RestAPI"],
     "builtFor": "Ho Chi Minh City University of Agriculture and Forestry Collaboration",
+    "stack": [
+      { "label": "Frontend", "items": ["React"] },
+      { "label": "Backend", "items": ["Node.js", "Express", "REST API"] },
+      { "label": "Data", "items": ["MongoDB"] },
+      { "label": "Firmware", "items": ["ESP32", "C++"] }
+    ],
     "github": "https://github.com/Kyle8Bits/SmartESP",
     "link": "https://youtu.be/F_8oUVvyJmY?si=BI9McIyzVUBWZjan"
   },
@@ -92,13 +117,14 @@
     "title": "Rent Mate",
     "description": "The RentMate Smart Rental Property Management System is a web-based platform designed to streamline rental operations for landlords, tenants, and property managers. Its primary purpose is to centralize the management of rental properties by integrating property listings, lease management, communication, payments, maintenance requests, and document handling into a single unified system. RentMate aims to address common challenges in the rental ecosystem (fragmented communication, manual payment tracking, inefficient maintenance coordination, and limited visibility into rental activities) by providing an intuitive, secure, and modern digital solution. The product supports the full lifecycle of rental interactions, from listing and searching for properties to managing active tenancies and historical records.",
     "image": "rent_mate.webp",
-    "tags": [
-      "React",
-      "Node.js",
-      "RabbitMQ",
-      "Supabase"
-    ],
+    "tags": ["React", "Node.js", "RabbitMQ", "Supabase"],
     "builtFor": "Course Project",
+    "stack": [
+      { "label": "Frontend", "items": ["React"] },
+      { "label": "Backend", "items": ["Node.js"] },
+      { "label": "Data", "items": ["Supabase (Postgres)"] },
+      { "label": "Infra", "items": ["RabbitMQ"] }
+    ],
     "github": "https://github.com/Kyle8Bits/RentMate",
     "link": null
   },
@@ -107,13 +133,16 @@
     "title": "Arduino RC Car",
     "description": "A remote-controlled car built using an Mini Arduino, Bluetooth module, motor control board, and the Dabble mobile app library. The car is controlled wirelessly via a smartphone, allowing real-time movement control through Bluetooth communication. This project demonstrates embedded systems development, wireless communication, and hardware-software integration.",
     "image": "arduino_rc.webp",
-    "tags": [
-      "C++",
-      "Arduino",
-      "JDY-33 BT Module",
-      "Dabble"
-    ],
+    "tags": ["C++", "Arduino", "JDY-33 BT Module", "Dabble"],
     "builtFor": "Club Project",
+    "stack": [
+      { "label": "Firmware", "items": ["C++", "Arduino IDE"] },
+      {
+        "label": "Hardware",
+        "items": ["Mini Arduino", "Motor Driver", "JDY-33 BT Module"]
+      },
+      { "label": "Control", "items": ["Dabble mobile app", "Bluetooth"] }
+    ],
     "github": "https://github.com/Kyle8Bits/Arduino_Remote_RC_Car",
     "link": "https://youtu.be/myx7Zmuy4rU?si=8bMaEsgWWfKyqWXb"
   }

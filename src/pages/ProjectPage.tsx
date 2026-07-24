@@ -20,6 +20,7 @@ type ProjectRecord = (typeof projectsData)[number] & {
   outcome?: string;
   stack?: StackGroup[];
   metrics?: Metric[];
+  submission?: string;
 };
 
 const projects: ProjectRecord[] = projectsData.map((project) => ({
@@ -120,7 +121,7 @@ const ProjectPage = () => {
         </div>
 
         {/* Links */}
-        {(project.link || project.github) && (
+        {(project.link || project.github || project.submission) && (
           <div className="flex flex-wrap gap-3 mb-6 sm:mb-8">
             {project.link && (
               <a
@@ -140,6 +141,16 @@ const ProjectPage = () => {
                 className="px-5 py-2.5 rounded-full border border-text/20 text-text/80 text-sm font-semibold hover:border-primary hover:text-primary active:scale-[0.98] transition-all"
               >
                 View Source on GitHub
+              </a>
+            )}
+            {project.submission && (
+              <a
+                href={project.submission}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 rounded-full border border-text/20 text-text/80 text-sm font-semibold hover:border-primary hover:text-primary active:scale-[0.98] transition-all"
+              >
+                View Submission ↗
               </a>
             )}
           </div>

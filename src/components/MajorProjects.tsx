@@ -35,7 +35,7 @@ const Badges = ({ project }: { project: Project }) => (
 );
 
 const ProjectLinks = ({ project }: { project: Project }) =>
-  project.link || project.github ? (
+  project.link || project.github || project.submission ? (
     <div className="flex flex-wrap gap-3">
       {project.link && (
         <a
@@ -55,6 +55,16 @@ const ProjectLinks = ({ project }: { project: Project }) =>
           className="px-5 py-2.5 rounded-full border border-text/20 text-text/80 text-sm font-semibold hover:border-primary hover:text-primary active:scale-[0.98] transition-all"
         >
           View Source
+        </a>
+      )}
+      {project.submission && (
+        <a
+          href={project.submission}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2.5 rounded-full border border-text/20 text-text/80 text-sm font-semibold hover:border-primary hover:text-primary active:scale-[0.98] transition-all"
+        >
+          View Submission ↗
         </a>
       )}
     </div>
